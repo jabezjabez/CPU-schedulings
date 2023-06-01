@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Disk Scheduling Techniques</title>
+</head>
+<body>
+
+    <div class="header">
+        <h2>Disk Scheduling Techniques</h2>
+    </div>
+
+    <div class="workcanvas">
+        <div class="workcanvaschild">
+            <div class="first">
+                <h4>Number of Jobs</h4>
+                <input type="number" id="inputNumber" oninput="generateInputs()">
+                <br><br>
+                <form id="inputForm" class="inputForm"></form>
+            </div>
+
+            <!-- Second Boxes -->
+            <div class="second">
+                <div class="secondboxes">
+                    <h4>Starting Position</h4>
+                    <input type="number" id="startingPosition">
+                </div>
+                <div class="secondboxes">
+                    <h4>Previous Position</h4>
+                    <input type="number" id="previousPosition">
+                </div>
+                <div class="secondboxes">
+                    <h4>Starting Track</h4>
+                    <input type="number" id="startingTrack">
+                </div>
+                <div class="secondboxes">
+                    <h4>Ending Track</h4>
+                    <input type="number" id="endingTrack">
+                </div>
+                <div class="secondboxes">
+                    <h4>Arm Movement</h4>
+                    <input type="number" id="armMovement">
+                </div>
+            </div>
+
+            <div class="third">
+                <button id="openModalButton">Algorithms</button>
+            </div>
+
+            <!-- This is the Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Algorithms</h2>
+                    <button onclick="runFIFO()">FIFO</button>
+                    <button onclick="runSSTF()">SSTF</button>
+                    <button onclick="runSCAN()">SCAN</button>
+                    <button onclick="runCSCAN()">C-SCAN</button>
+                    <button onclick="runLOOK()">LOOK</button>
+                    <button onclick="runCLOOK()">C-LOOK</button>
+                </div>
+            </div>
+
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
